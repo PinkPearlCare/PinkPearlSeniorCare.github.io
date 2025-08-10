@@ -1,93 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pink Pearl Senior Care</title>
-<style>
-body {
-font-family: 'Georgia', serif;
-background-color: #fffaf9;
-color: #333;
-margin: 0;
-padding: 0;
-}
-header {
-text-align: center;
-padding: 2rem;
-}
-header img {
-max-width: 150px;
-}
-h1 {
-color: #b76e79;
-font-size: 2.2rem;
-}
-h2 {
-color: #d4af37;
-}
-section {
-max-width: 800px;
-margin: auto;
-padding: 1.5rem;
-}
-.services ul {
-list-style-type: none;
-padding: 0;
-}
-.services li {
-padding: 0.5rem 0;
-}
-footer {
-text-align: center;
-font-size: 0.9rem;
-padding: 1rem;
-color: #777;
-}
-a {
-color: #b76e79;
-text-decoration: none;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Pearl Senior Care</title>
+  <link href="https://fonts.googleapis.com/css?family=Georgia:400,700|Montserrat:600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #b76e79;
+      --accent: #d4af37;
+      --background: #fffaf9;
+      --text: #333;
+      --footer-bg: #f7ecea;
+      --card-bg: #fff;
+      --border-radius: 12px;
+      --shadow: 0 2px 16px rgba(183, 110, 121, 0.07);
+    }
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      background: linear-gradient(90deg, #fffaf9 70%, #ffe7e3 100%);
+      box-shadow: var(--shadow);
+      border-bottom: 1px solid #f2dbd7;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #f2dbd7;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+    .services ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem 2.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0.7rem 0 0 0;
+    }
+    .services li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.3rem;
+      font-size: 1.07rem;
+    }
+    .services li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .contact-form {
+      margin-top: 1.2rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #eed6cf;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fffaf9;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.8rem 2.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.07rem;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(183, 110, 121, 0.10);
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    footer {
+      background: var(--footer-bg);
+      text-align: center;
+      font-size: 0.97rem;
+      padding: 1.2rem 0;
+      color: #777;
+      border-top: 1px solid #f2dbd7;
+      letter-spacing: 0.04em;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 700px) {
+      section {
+        padding: 1rem;
+      }
+      .services ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<img src="logo.png" alt="Pink Pearl Senior Care Logo">
-<h1>Pink Pearl Senior Care</h1>
-<p>Compassionate 1:1 care for seniors in the comfort of their homes</p>
-</header>
+  <header>
+    <img src="logo.png" alt="Pink Pearl Senior Care Logo">
+    <h1>Pink Pearl Senior Care</h1>
+    <p style="color:#85505a; font-size:1.2rem;">Compassionate 1:1 care for seniors in the comfort of their homes</p>
+  </header>
 
-<section>
-<h2>About Us</h2>
-<p>With over 15 years of experience, Pink Pearl Senior Care provides a holistic, insured, and trusted approach to senior care. We specialize in creating a serene, safe, and comfortable environment tailored to each client’s unique needs.</p>
-</section>
+  <section>
+    <h2>About Us</h2>
+    <p>
+      For over 15 years, Pink Pearl Senior Care has supported families by providing holistic, insured, and trusted in-home care for seniors. Our team is dedicated to creating a serene, safe, and nurturing environment tailored to each client’s needs—helping seniors live independently with dignity and joy.
+    </p>
+  </section>
 
-<section class="services">
-<h2>Our Services</h2>
-<ul>
-<li>Personalized companionship</li>
-<li>Light meal preparation</li>
-<li>Errands & shopping assistance</li>
-<li>Wellness and mobility support</li>
-<li>Respite care for families</li>
-</ul>
-</section>
+  <section class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Personalized companionship</li>
+      <li>Light meal preparation</li>
+      <li>Errands &amp; shopping assistance</li>
+      <li>Wellness and mobility support</li>
+      <li>Respite care for families</li>
+      <li>Medication reminders</li>
+      <li>Daily routine assistance</li>
+      <li>Social &amp; recreational activities</li>
+    </ul>
+  </section>
 
-<section>
-<h2>Contact Us</h2>
-<p><strong>Phone:</strong> (XXX) XXX-XXXX</p>
-<p><strong>Email:</strong> your@email.com</p>
-<p>Or fill out our simple contact form below:</p>
-<form action="mailto:your@email.com" method="POST" enctype="text/plain">
-<input type="text" name="Name" placeholder="Your Name" required><br><br>
-<input type="email" name="Email" placeholder="Your Email" required><br><br>
-<textarea name="Message" placeholder="Your Message" rows="5" required></textarea><br><br>
-<button type="submit">Send Message</button>
-</form>
-</section>
+  <section>
+    <h2>Contact Us</h2>
+    <p>
+      <strong>Phone:</strong> <a href="tel:555-555-5555">(555) 555-5555</a><br>
+      <strong>Email:</strong> <a href="mailto:info@pinkpearlcare.com">info@pinkpearlcare.com</a>
+    </p>
+    <p>Or fill out our simple contact form below:</p>
+    <form class="contact-form" action="mailto:info@pinkpearlcare.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-<footer>
-&copy; 2025 Pink Pearl Senior Care. All Rights Reserved.
-</footer>
+  <footer>
+    &copy; 2025 Pink Pearl Senior Care. All Rights Reserved. | <a href="#privacy">Privacy Policy</a>
+  </footer>
 </body>
 </html>
